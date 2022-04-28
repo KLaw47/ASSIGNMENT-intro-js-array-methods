@@ -74,8 +74,9 @@ renderCards(books);
     </thead>
     <tbody>
     `;
-    
-    productList().forEach(item => {
+    //look up locale compare
+    productList().sort((a, b) a.type.localeCompare(b.type))
+    .forEach(item => {
       table += tableRow(item);
     });
 
